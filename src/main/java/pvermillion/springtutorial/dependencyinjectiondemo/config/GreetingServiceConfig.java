@@ -27,7 +27,7 @@ public class GreetingServiceConfig {
     @Primary
     @Profile("spanish") // es
     GreetingService primarySpanishGreetingService(GreetingServiceFactory greetingServiceFactory) {
-        return greetingServiceFactory.createGreetingService("english");
+        return greetingServiceFactory.createGreetingService("spanish");
     }
 
     @Bean
