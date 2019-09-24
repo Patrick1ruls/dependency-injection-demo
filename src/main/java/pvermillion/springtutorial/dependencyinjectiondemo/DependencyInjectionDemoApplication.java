@@ -8,6 +8,7 @@ import pvermillion.springtutorial.dependencyinjectiondemo.controllers.Constructo
 import pvermillion.springtutorial.dependencyinjectiondemo.controllers.GetterInjectedController;
 import pvermillion.springtutorial.dependencyinjectiondemo.controllers.MyController;
 import pvermillion.springtutorial.dependencyinjectiondemo.controllers.PropertyInjectedController;
+import pvermillion.springtutorial.dependencyinjectiondemo.examplebeans.FakeDataSource;
 
 @SpringBootApplication
 public class DependencyInjectionDemoApplication {
@@ -17,11 +18,9 @@ public class DependencyInjectionDemoApplication {
 
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		System.out.println(controller.hello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
-		
+		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
+
+		System.out.println(fakeDataSource.getUser());
 	}
 
 }
