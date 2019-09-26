@@ -4,3 +4,12 @@ pv:
     username: JMS Username
     password: somePASS
     dburl: SomeURL
+
+# New file
+---
+spring:
+  profiles: german
+# Spring profile overwrites the above config info
+pv:
+  jms:
+    username: JMS Username IN GEEERRRRRMAN!!!
