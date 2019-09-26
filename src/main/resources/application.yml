@@ -1,0 +1,6 @@
+# Can mix and match application.properties and application.yml
+pv:
+  jms:
+    username: JMS Username
+    password: somePASS
+    dburl: SomeURL
